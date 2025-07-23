@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: eksctl.io/v1aplha5
 kind: ClusterConfig
 
 metadata:
