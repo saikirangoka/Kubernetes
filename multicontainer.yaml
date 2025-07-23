@@ -4,6 +4,8 @@ apiVersion: v1
 metadata:
   name: multicontainers
   namespace: expense
+  labels:
+    name: Elasticsearch, Logstash, and Kibana
 
 spec:
   containers:

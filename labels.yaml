@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+  name: mycon
+  namespace: expense
+  labels:
+    project: bhp
+    environment: prod
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
