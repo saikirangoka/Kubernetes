@@ -1,13 +1,8 @@
-kind: Pod
+kind: Namespace
 apiVersion: v1
 
 metadata:
-  name: nginx
-
-spec:
-  containers:
-  - name: nginx
-    image: nginx
-  - name: almalinux
-    image: almalinux:9
-    command: ["sleep", "1000"]
+  name: expense
+  labels:
+    project: roboshop
+    environment: ddev
