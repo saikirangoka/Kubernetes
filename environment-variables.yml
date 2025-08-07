@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: environmentvariables
+  labels:
+    project: bhp
+    environment: prod
+
+spec:
+  containers:
+  - name: almalinux
+    image: almalinux:9
+    command: [ "sleep", "100" ]
+    env:
+      project: bhp2
+      environment: production
+      version: "6.1"
