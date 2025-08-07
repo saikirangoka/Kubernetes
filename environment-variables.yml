@@ -13,6 +13,7 @@ spec:
     image: almalinux:9
     command: [ "sleep", "100" ]
     env:
-      project: bhp2
-      environment: production
-      version: "6.1"
+    - name: project
+      value: "bhp2"
+    - name: environment
+      value: production
