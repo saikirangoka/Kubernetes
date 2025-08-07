@@ -1,11 +1,13 @@
 apiVersion: v1
-kind: Namespace
+kind: Pod
 
 metadata:
-  name: expense
+  name: bhp_pod_1
   labels:
     project: bhp
     environment: prod
-    versioncontrol: git
 
-
+spec:
+  containers:
+  - name: nginx
+    image: nginx
