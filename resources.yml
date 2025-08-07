@@ -4,8 +4,8 @@ kind: Pod
 metadata:
   name: resources
   labels:
-  project: bt
-  environment: dev
+   project: bt
+   environment: prod
 
 spec:
   containers:
