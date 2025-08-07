@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 
 metadata:
-  name: bhp_pod_1
+  name: bhp-pod-1
   labels:
     project: bhp
     environment: prod
