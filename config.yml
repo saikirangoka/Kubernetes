@@ -8,6 +8,19 @@ metadata:
     environment: Prod
 
 data:
-  course: "DevOps"
-  student: "sai"
-  duration: "40 days"
+  COURSE: "DevOps"
+  STUDENT: "sai"
+  DURATION: "40 days"
+
+
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: pod-config
+#   labels:
+#     purpose: config
+#     env: dev
+# data:
+#   COURSE: "DevOps with AWS"
+#   DURATION: "120HRS"
+#   TRAINER: "SIVAKUMAR REDDY M"
