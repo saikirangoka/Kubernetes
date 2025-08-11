@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: nodeportservice
+
+spec:
+  type: NodePort
+  selector:
+    name: BritishTelecom
+    project: Telecom
+    environment: dev
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+
+---
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: nodeportpod
+  labels:
+    name: BritishTelecom
+    project: Telecom
+    environment: dev
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
