@@ -4,7 +4,7 @@ apiVersion: v1
 metadata:
   name: multicontainers
   labels:
-    name: Elasticsearch, Logstash, and Kibana
+    name: Elasticsearch
 
 spec:
   containers:
