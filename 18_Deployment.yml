@@ -26,4 +26,26 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: saikirangoka/app:1.0.0
+
+---
+
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: service1
+  labels:
+    name: bhp
+
+spec:
+  type: LoadBalancer
+  selector:
+    project: bhp
+    environment: dev
+    service: telecom
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30952
