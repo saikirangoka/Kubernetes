@@ -8,22 +8,22 @@ metadata:
     environment: dev
     service: telecom
 
-  spec:
-    replicas: 3
-    selector:
-      matchLabels:
+spec:
+   replicas: 3
+   selector:
+    matchLabels:
+      project: bhp
+      environment: dev
+      service: telecom
+
+   template:
+    metadata:
+      name: deployment1
+      labels:
         project: bhp
         environment: dev
         service: telecom
-
-    template:
-      metadata:
-        name: deployment1
-        labels:
-          project: bhp
-          environment: dev
-          service: telecom
-      spec:
-        containers:
-        - name: nginx
-          image: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
