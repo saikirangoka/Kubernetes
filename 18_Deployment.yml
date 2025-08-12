@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: saikirangoka/app:1.0.0
+        image: saikirangoka/app:2.0.0
 
 ---
 
