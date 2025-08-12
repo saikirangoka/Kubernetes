@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+
+metadata:
+  name: replicaset1
+  labels:
+    project: BHP
+    environment: prod
+    service: telecom
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: BHP
+      environment: prod
+      service: telecom
+  template:
+    metadata:
+      name: bhppod
+      labels:
+        project: BHP
+        environment: prod
+        service: telecom
+
+    spec:
+      containers:
+        - name: nginx
+          image: nginx    
