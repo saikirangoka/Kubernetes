@@ -1,13 +1,46 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: expense
+  region: us-east-1
+
+managedNodeGroups:
+  - name: expense
+    instanceTypes: ["c3.large", "c4.large", "c5.large"]
+    desiredCapacity: 3
+    spot: true
+
+---
+
 apiVersion: v1
 kind: ConfigMap
 
 metadata:
-  name: configuration
+  name: config1
   labels:
-    project: Expense
-    environment: Prod
+    name: bhp
+    project: bhp
 
 data:
-  course: "DevOps"
-  student: "sai"
-  duration: "40 days"
+  COURSE: "devops"
+  STUDENT: "sai"
+
+
+---
+
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: expense1
+  labels:
+    project: bt
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+      name: config1
