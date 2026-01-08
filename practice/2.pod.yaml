@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+
+metadata:
+  name: nginxpod
+  labels:
+    project: bhp
+    environment: prod
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
