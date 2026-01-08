@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 
 metadata:
-  name: ConfigMap
+  name: configmy
 
 data:
   project: "bhp"
