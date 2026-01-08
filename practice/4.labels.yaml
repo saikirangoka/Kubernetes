@@ -5,7 +5,7 @@ metadata:
   name: labels
   labels:
     project: bhp
-    version: 6.1
+    version: "6.1"
     environment: prod
     language: python
 
