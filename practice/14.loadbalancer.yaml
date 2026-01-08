@@ -8,7 +8,7 @@ metadata:
     project: platformmaintainance
 
 spec:
-  type: Loadbalancer
+  type: LoadBalancer
   selector:
     empid: "13272805"
   ports:
